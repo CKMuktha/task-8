@@ -1,0 +1,19 @@
+#Creating two class methds Area and Perimeter that calculate Area and perimeter
+
+class circle():
+
+      def __init__(self,r):       #creating constructor for radius
+         self.radius=r
+          
+      def area(self):                       #creating area function that calculates area of circle
+    
+            return self.radius**2*3.141      # returns a=r*r*pi
+
+      def perimeter(self):                   #creating perimeter function to calculate perimeter
+           
+          return  2*self.radius*3.141        #returns p=2*pi*r
+
+
+result=circle(7)                              #creating object result for class circle
+print(result.area())
+print(result.perimeter())

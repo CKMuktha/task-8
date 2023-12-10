@@ -1,0 +1,16 @@
+#creating class circle 
+
+class circle:
+     
+#creating constructor
+     def __init__(self):
+        self.num=[10,501,22,37,100,999,87,351]
+        
+#method to print list
+     def number(self):
+        print(self.num) 
+        
+        
+a=circle()   #creating object for class
+
+a.number()   

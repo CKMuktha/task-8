@@ -1,0 +1,18 @@
+#Create proper member variables inside the task if required like pi=3.141
+class myClass():
+
+  #creating constructor for pi
+  def __init__(self):
+     self.__pi=3.141
+     print("I am inside class myClass")
+
+#creating private variable function
+  def priVar(self):
+     print("Private Variable value: ",self.__pi)
+
+a = myClass()   #calling class
+a.priVar()      
+a.__pi
+
+
+

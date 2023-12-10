@@ -1,0 +1,56 @@
+class Television:
+        def __init__(self, volume = 0, channel = 0):
+                self.__volume = volume
+                self.__channel = channel
+
+        @property
+        def volume(self): return self.__volume
+
+        @volume.setter
+        def volume(self, volume):
+                if not 0 <= volume <= 100:
+                        print('Volume out of bounds.')
+                        return
+                self.__volume = volume
+
+        @property
+        def channel(self): return self.channel
+
+        @channel.setter
+        def channel(self, channel):
+                if channel < 0 or channel > 50:
+                        print('Channel out of bounds.')
+                        return
+                self.__channel = channel
+
+        def __str__(self): #for printing it
+                return 'Volume is {} and channel is {}.'.format(self.__volume, self.__channel)
+
+tv = Television() #calling init
+
+while True:
+        choice = input ('''YO TV
+
+0 - Turn off TV
+1 - TV status
+2 - Change channel
+3 - Change volume
+''')
+        if choice == '0': break
+        if choice == '1':
+                print(tv) #calling __str__
+                continue
+        if choice == '2':
+                tv.channel = int(input('New channel: ')) #note here
+                continue
+        if choice == '3':
+                tv.volume = int(input('New volume: ')) #note here
+                continue
+        print('Unkown command.')
+
+
+class LedTv(Television):
+        
+      
+                                
+                    
